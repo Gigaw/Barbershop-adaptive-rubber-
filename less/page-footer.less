@@ -1,0 +1,326 @@
+.page-footer__wrapper{
+  width: 87.5%;
+  margin: 0 auto;
+}
+
+.page-footer__contacts{
+  padding-top: 35px;
+
+  text-align: center;
+}
+
+.contacts__phone{
+  display: block;
+  text-decoration: none;
+  text-align: center;
+
+  color: white;
+  font-weight: bold;
+
+
+  width: 100%;
+  border: 1px solid #3F3F3F;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin-top: 30px;
+  margin-bottom: 25px;
+
+  &:hover{
+    border-color: #535353;
+  }
+
+  &:active{
+    background-color: #252525;
+    color: rgba(255, 255, 255, 0.3);
+    border-color: #252525;
+  }
+}
+.social__title{
+  display: none;
+}
+
+.social__list{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+
+  margin-bottom: 30px;
+}
+
+.social__item{
+  font-size: 0;
+  flex-grow: 1;
+
+
+  min-height: 100px;
+
+  border: 1px solid #3F3F3F;
+
+  text-align: center;
+
+  &:hover{
+    border-color: #535353;
+  }
+
+  &:active{
+    border-color: #252525;
+    background-color: #252525;
+
+    opacity: 0.3;
+  }
+
+}
+.social__link{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100px;
+
+  &::before{
+    content: "";
+  }
+
+  &--facebook::before{
+    background-image: url(../img/facebook-icon-big.png);
+    background-repeat: no-repeat;
+
+    width: 18px;
+    height: 39px;
+  }
+
+  &--vkontakte::before{
+    background-image: url(../img/vk-icon-big.png);
+    background-repeat: no-repeat;
+
+    width: 23px;
+    height: 26px;
+  }
+
+  &--instagram::before{
+    background-image: url(../img/insta-icon-big.png);
+    background-repeat: no-repeat;
+
+    width: 36px;
+    height: 36px;
+  }
+}
+
+.copyright__text{
+  display: block;
+  font-weight: normal;
+
+  text-align: center;
+
+  margin-bottom: 15px;
+
+}
+
+.page-footer__copyright--tablet{
+  display: none;
+}
+
+.copyright__link{
+  display: block;
+
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  width: 100%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+
+  font-weight: bold;
+  color: white;
+
+  border: 1px solid #3F3F3F;
+
+
+  &:hover{
+    border-color: #535353;
+  }
+
+  &:active{
+    border-color: #252525;
+    background-color: #252525;
+
+    opacity: 0.3;
+  }
+}
+
+.page-footer__wrapper{
+  padding-bottom: 30px;
+}
+
+@media (min-width: @tablet-width) {
+  .page-footer__copyright--tablet{
+    display: block;
+  }
+  .page-footer__copyright{
+    display: none;
+  }
+
+  .page-footer__contacts-copyright-wrapper{
+    display: flex;
+
+  justify-content: space-between;
+
+    padding-top: 35px;
+
+    margin-bottom: 45px;
+  }
+
+  .contacts__title{
+    text-transform: uppercase;
+    display: block;
+
+    text-align: left;
+
+
+  }
+  .contacts__text{
+    margin: 0;
+  }
+
+
+
+  .contacts__phone{
+    font-weight: normal;
+
+    border: none;
+
+    margin: 0;
+    padding: 0;
+
+    text-align: left;
+
+  }
+
+  .copyright__text{
+    margin: 0;
+  }
+
+  .copyright__link{
+    padding-left: 30px;
+    padding-right: 30px;
+
+    width: 115px;
+  }
+
+  .page-footer__contacts{
+    padding: 0;
+  }
+
+  .page-footer--our-work{
+    padding-top: 50px;
+  }
+
+
+
+}
+
+@media (min-width: @desktop-width) {
+  .page-footer__copyright--tablet{
+    display: none;
+  }
+
+  .page-footer__copyright{
+    display: block;
+  }
+
+  .page-footer__social{
+    padding-right: 135px;
+  }
+
+  .social__list{
+    width: 200px;
+    flex-wrap: wrap;
+
+    justify-content: space-between;
+
+
+  }
+
+  .social__link{
+
+    width: 59px;
+    min-height: 59px;
+
+  }
+
+  .social__item{
+    flex-grow: 0;
+    width: 59px;
+    min-height: 59px;
+  }
+
+  .social__title{
+    display: block;
+
+    font-weight: normal;
+
+    text-align: center;
+  }
+
+  .copyright__link{
+    display: block;
+
+  }
+
+  .page-footer__wrapper{
+    display: flex;
+
+    justify-content: space-between;
+  }
+
+  .page-footer__contacts-copyright-wrapper{
+    padding: 0;
+  }
+
+  .page-footer__wrapper{
+    padding-top: 30px;
+    padding-bottom: 0;
+  }
+
+  .social__link{
+
+    &--facebook::before{
+      background-size:cover;
+
+      width: 10px;
+      height: 21px;
+    }
+
+    &--vkontakte::before{
+      background-size:cover;
+
+      width: 15px;
+      height: 17px;
+    }
+
+    &--instagram::before{
+      background-size:cover;
+
+      width: 19px;
+      height: 19px;
+    }
+  }
+
+  .copyright__text{
+    display: block;
+    font-weight: normal;
+
+    text-align: center;
+
+  }
+  .page-footer--our-work{
+    padding-top: 0;
+  }
+
+
+
+
+
+
+}

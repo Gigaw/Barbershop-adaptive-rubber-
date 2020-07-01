@@ -1,0 +1,174 @@
+.price {
+  background-color: #353535;
+  position: relative;
+  padding-bottom: 20px;
+}
+
+.price__number{
+  display: none;
+}
+
+.price__title{
+  padding-top: 50px;
+  margin-top: 0;
+}
+
+.price__wrapper{
+  width: 87.5%;
+  margin: 0 auto;
+}
+
+.price__title{
+  font-size: 30px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.price__shampoo{
+  display: none;
+}
+
+.price__price{
+  vertical-align: top;
+  text-align: right;
+  margin-left: auto;
+
+}
+
+.price__list{
+ width: 100%;
+
+}
+
+.sale-time{
+  border: 1px solid #494949;
+  height: 90px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 60px;
+
+}
+.price__transition{
+
+  width: 100%;
+  height: 35px;
+  position: absolute;
+  bottom: -35px;
+}
+
+.price__haircut-type{
+  font-weight: bold;
+}
+.price__shampoo--mobile{
+  font-weight: 400;
+}
+
+@media (min-width: @tablet-width) {
+
+  .price__title{
+    text-align: left;
+    font-size: 40px;
+  }
+
+  .price__number{
+    display: table-cell;
+  }
+  .price__shampoo--mobile{
+    display: none;
+  }
+
+  .price__shampoo{
+    display: table-cell;
+  }
+  .price__list  {
+    border: 1px solid #494949;
+    border-collapse: collapse;
+  }
+  .price__list td{
+    border: 1px solid #494949;
+  }
+
+  .price__number{
+    width: 70px;
+    height: 55px;
+    text-align: center;
+    vertical-align: middle;
+  }
+  .price__haircut-type{
+    padding-left: 20px;
+  }
+  .price__shampoo{
+    padding-left: 20px;
+  }
+  .price__price{
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  .sale-time{
+    height: 110px;
+
+    justify-content: center;
+  }
+  .sale-time__image{
+    width: 72px;
+    height: 71px;
+
+    margin-left:25px;
+  }
+  .sale-time br{
+    display: none;
+  }
+  .sale-time__description{
+    font-size: 30px;
+    margin: 0 auto;
+  }
+  .price__transition{
+    display: none;
+  }
+  .price {
+    padding-bottom: 55px;
+  }
+
+}
+
+@media (min-width: @desktop-width) {
+  .price__list{
+    width: 65%;
+  }
+  .sale-time{
+    width: 28%;
+    height: auto;
+    margin: 0;
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .sale-time__description{
+    font-size: 20px;
+    font-weight: normal;
+
+    margin: 0;
+
+    & br{
+      display: inline;
+    }
+  }
+
+  .price__table-time-wrapper{
+    display: flex;
+    justify-content: space-between;
+
+
+  }
+
+  .sale-time__image{
+    width: 142px;
+    height: 139px;
+
+    margin: 0;
+  }
+}

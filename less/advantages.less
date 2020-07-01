@@ -1,0 +1,174 @@
+
+.advantages__wrapper{
+  width: 73%;
+  margin: 0 auto;
+}
+
+.advantages svg{
+  background-color: #F7F5F1;
+  width: 100%;
+  height: 35px;
+  display: block;
+}
+
+.advantages__list{
+  list-style: none;
+
+  margin: 0;
+  padding: 0;
+}
+
+.advantages__item{
+  text-align: center;
+  margin-top: 30px;
+  &::before{
+    content: "";
+    display: inline-block;
+
+    width: 95px;
+    height: 94px;
+
+    background-repeat:no-repeat;
+  }
+
+  &--fast::before{
+    background-image: url(../img/advantage-1.png);
+  }
+
+  &--cool::before{
+    background-image: url(../img/advantage-2.png);
+  }
+
+  &--expensive::before{
+    background-image: url(../img/advantage-3.png);
+  }
+}
+
+.advantages__title{
+  font-size: 30px;
+  line-height: 36px;
+
+  margin: 0;
+  margin-top: 10px;
+
+  text-transform: uppercase;
+}
+
+.advantages__description{
+  font-size: 20px;
+  line-height: 26px;
+}
+
+
+
+
+@media (max-width: @mobile-width-only){
+
+  .advantages--nojs .advantages__toggles{
+    display: none;
+  }
+
+  .advantages__item{
+    display: none;
+  }
+
+  .advantages--nojs .advantages__item{
+    display: block;
+  }
+
+  .advantages__item--mobile-active{
+    display: block ;
+  }
+
+
+  .advantages__toggles .slider__toggle--active{
+    background-color: white;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .advantages__wrapper{
+    width: 84%;
+
+    max-width: 960px;
+    margin: 0 auto;
+  }
+
+
+  .advantages__item{
+
+    margin-top: 40px;
+
+    padding-bottom: 35px;
+
+    border-bottom: 1px solid #494949;
+
+    &::before{
+      margin-right: 30px;
+
+      float: left;
+    }
+    &:last-child{
+      border-bottom: none;
+    }
+  }
+
+  .advantages__description{
+    margin: 0;
+    margin-top: 5px;
+  }
+
+  .advantages__title, .advantages__description{
+    text-align: left;
+    vertical-align: top;
+  }
+
+  .advantages__toggles{
+    display: none;
+  }
+
+  .advantages__list{
+    margin-bottom: 45px;
+  }
+
+  .advantages svg{
+    height: 45px;
+  }
+}
+
+@media (min-width: @desktop-width){
+  .advantages__item{
+    display: block;
+  }
+  .advantages__wrapper{
+    max-width: 1200px;
+  }
+
+  .advantages__item{
+    box-sizing: border-box;
+
+    width: 33.333%;
+    padding: 0 4%;
+
+    border-bottom: none;
+    border-right: 1px solid #494949;
+
+
+    &::before{
+      float: none;
+      margin: 0;
+    }
+
+    &:last-child{
+      border-right: none;
+    }
+  }
+
+  .advantages__title, .advantages__description{
+    text-align: center;
+  }
+
+  .advantages__list{
+    display: flex;
+  }
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Popups</title>
+    <link rel="stylesheet" type="text/css" href="css/style.min.css">
+
+  </head>
+
+  <body>
+    <section class="login-popup">
+      <h2 class="login-popup__header">Личный кабинет</h2>
+      <p class="login-popup__description">Введите свой логин и пароль, чтобы войти </p>
+      <form class="login-popup__form" action="index.html" method="post">
+        <label class="login-popup__user-name"><input type="text" name="user-login" value="" required="">
+        <span class="login-popup__input-text">Логин</span></label>
+
+        <label class="login-popup__user-password"><input type="password" name="user-password" value="" required="">
+        <span class="login-popup__input-text">Пароль</span></label>
+
+        <div class="remember-forgot-password-wrapper">
+          <label class="login-popup__remember">
+            <input class="" type="checkbox" name="remember-me" value="">
+             <span class="login-popup__checkbox-text">Запомните меня</span>
+            </label>
+          <a class="login-popup__forgot-password" href="#">Я забыл пароль! </a>
+        </div>
+
+
+        <button class="login-popup__login-button" type="submit" name="button">Войти в личный кабинет</button>
+
+      </form>
+
+      <button class="login-popup__close-button" type="button" name="button"></button>
+    </section>
+    <section class="failure-popup">
+      <h2 class="failure-popup__header">Неудача</h2>
+      <p class="failure-popup__description">Что-то пошло не так. Проверьте выделенные красным поля формы.</p>
+      <button class="failure-popup__button" type="button" name="button">ок</button>
+    </section>
+    <section class="success-popup">
+      <h2 class="success-popup__header">Это успех!</h2>
+      <p class="success-popup__description">Ваша заявка отправлена. Ожидайте,
+        мы свяжемся с вами как только будет минутка.</p>
+      <button class="success-popup__bu" type="button" name="button">Закрыть окно</button>
+
+    </section>
+
+  </body>
+</html>

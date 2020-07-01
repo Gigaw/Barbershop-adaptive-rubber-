@@ -1,0 +1,232 @@
+.login-popup{
+  display: none;
+
+  color: black;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 320px;
+  height: 360px;
+
+  padding: 55px 70px;
+
+  background-color: #F7F5F1;
+
+  z-index: 10;
+
+  box-shadow: 0 20px 40px 1px black;
+}
+
+.login-popup--opened{
+  display: block;
+}
+
+
+.login-popup__header{
+  margin: 0;
+  padding: 0;
+  font-size: 40px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.login-popup__description{
+  font-size: 18px;
+  text-align: center;
+}
+
+.login-popup__user-password ,
+.login-popup__user-name{
+  position: relative;
+}
+.login-popup__user-password input,
+.login-popup__user-name input{
+
+  width: 100%;
+  height: 50px;
+  margin-bottom: 6px;
+
+  font-size: 18px;
+
+
+  border: 1px solid #E5DDD5;
+
+  box-sizing: border-box;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  outline: none;
+
+ transition-duration: 0.5s;
+
+  &:hover{
+    border-color: #D5C9BE;
+  }
+
+  &:focus{
+    border-color: #9A9A9A;
+  }
+}
+
+.login-popup__user-password span,
+.login-popup__user-name span{
+  position: absolute;
+
+  top: 50%;
+  left: 20px;
+
+  transform: translateY(-50%);
+
+}
+
+.login-popup__user-name input:valid + span
+,.login-popup__user-name input:focus + span {
+  font-size: 12px;
+  transform: translateY(-30px);
+  transition-duration: 1s;
+}
+
+.login-popup__user-password input:focus + span
+,.login-popup__user-password input:valid + span {
+  font-size: 12px;
+  transform: translateY(-30px);
+
+  transition-duration: 1s;
+}
+
+ .login-popup__remember {
+  position: relative;
+  display: block;
+  height: 33px;
+  padding-left: 50px;
+
+  &:hover{
+    color: #694D37;
+    transition: color 0.2s linear;
+  }
+
+   
+
+  & input{
+   appearance: none;
+   position: absolute;
+  }
+ }
+
+ .login-popup__checkbox-text::after{
+  content: "";
+
+ display: inline-block;
+ position: absolute;
+
+ left: 0;
+
+
+  width: 32px;
+  height: 32px;
+
+  background-color: white;
+  border: 1px solid #E5DDD6;
+
+ }
+
+ .login-popup__checkbox-text::before{
+  content: "";
+
+  display: inline-block;
+  position: absolute;
+ 
+  left: 0;
+ 
+ 
+  width: 32px;
+  height: 32px;
+
+  opacity: 0;
+
+  z-index: 2;
+
+  
+
+  background-position: center;
+  background-image: url("../img/checkbox.png");
+  background-repeat: no-repeat;
+
+  transition: opacity 0.1s linear;
+ }
+
+.login-popup__remember input:checked + span::before {
+  opacity: 1;
+}
+
+
+ .login-popup__checkbox-text{
+   vertical-align: middle;
+ }
+
+ .remember-forgot-password-wrapper{
+   display: flex;
+   justify-content: space-between;
+   margin-top: 20px;
+ }
+
+ .login-popup__forgot-password{
+   color: black;
+   &:hover{
+     color: #694D37;
+   }
+   &:active{
+     text-decoration: none;
+   }
+
+   transition-duration: 0.2s;
+ }
+
+ .login-popup__login-button{
+
+   display: block;
+   border: none;
+   border-radius: 0;
+
+   font-family: inherit;
+   font-size: 18px;
+   text-transform: uppercase;
+   color: white;
+
+   width: 100%;
+   height: 50px;
+
+   margin-top: 33px;
+   background-color: #81654F;
+
+   &:hover{
+     background-color: #694D37;
+   }
+   &:active{
+     color: rgba(255, 255, 255, 0.3);
+   }
+
+   transition-duration: 0.2s;
+
+   cursor: pointer;
+ }
+
+ .login-popup__close-button{
+   width: 26px;
+   height: 26px;
+
+   cursor: pointer;
+
+   background-color: transparent;
+
+   border: none;
+   border-radius: none;
+
+   background-image: url("../img/login-close-button.png");
+
+   position: absolute;
+   top: 60px;
+   right:-80px;
+ }

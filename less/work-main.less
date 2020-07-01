@@ -1,0 +1,69 @@
+.work-main__button{
+  display: none;
+
+  transition: border-color 0.3s ease;
+
+  &:hover{
+    border-color:#81654f ;
+
+    transition: border-color 0.3s ease;
+  }
+
+  cursor: pointer;
+}
+
+.work-main__title{
+  font-size: 30px;
+  color: black;
+  text-transform: uppercase;
+  margin: 0;
+  text-align: center;
+}
+
+.work-main__header{
+  padding: 30px 0;
+
+  display: flex;
+  justify-content: center;
+
+  background-color: #F8F5F2;
+
+  text-align: center;
+
+}
+
+.our-work__transition polygon{
+  fill: #F8F5F2;
+
+}
+.our-work{
+  position: relative;
+}
+.our-work__transition{
+  width: 100%;
+  height: 35px;
+  position: absolute;
+  bottom: -34px;
+  border: none;
+}
+
+.work-main__header-wrapper{
+  width: 87.5%;
+
+  display: flex;
+
+  justify-content: space-between;
+
+}
+
+@media (min-width: @tablet-width) {
+  .work-main__button{
+    display: block;
+
+  }
+  .work-main__header{
+    display: flex;
+  }
+
+
+}
